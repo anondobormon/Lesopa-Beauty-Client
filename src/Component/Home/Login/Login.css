@@ -1,0 +1,8 @@
+.login{
+    background-image: url(../../../Image/login-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 50px;
+}

@@ -1,0 +1,23 @@
+.member{
+    width: 80%;
+    background: white;
+    margin: auto;
+    position: relative;
+    height: 20%;
+    margin-top: -15%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px rgb(245, 244, 244);
+
+}
+.member h4{
+    padding-top: 4%;
+}
+.member:hover{
+    margin-top: -25%;
+}
+.our-team{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+}

@@ -1,0 +1,41 @@
+.footerArea{
+    height: 50vh;
+    background: #fcd6d5;
+}
+.footer{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+
+
+.footer-detail ul, .footer-icon ul{
+    display: flex;
+}
+.footer-detail ul{
+    list-style: none;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+.footer-detail ul li{
+    font-weight: 700;
+    cursor: pointer;
+}
+.icon{
+    width: 25%;
+    margin: auto;
+    position: relative;
+}
+.footer-icon ul li{
+    padding: 0 10px;
+    list-style: none;
+    padding: 0 10px;
+    
+    /* justify-content: space-between; */
+}
+.icon-style{
+    border-right: 3px solid #888888;
+    font-size: 20px;
+}
