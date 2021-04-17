@@ -16,6 +16,7 @@ import Review from './Component/UserDashboard/UserDashboard/Review';
 import Login from './Component/Home/Login/Login';
 import PrivetRoute from './Component/Home/Login/PrivetRoute';
 import OrderList from './Component/Admin/Admin/OrderList';
+import Navbar from './Component/Home/Navbar/Navbar'
 
 
 export const UserContext = createContext({})
@@ -25,6 +26,7 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
+        <Navbar></Navbar>
         <Switch>
 
           <Route exact path='/'>
@@ -55,9 +57,9 @@ function App() {
 
 
 
-          <Route path='/user/dashboard'>
+          <PrivetRoute path='/user/dashboard'>
             <UserDashboard></UserDashboard>
-          </Route>
+          </PrivetRoute>
 
           <PrivetRoute path='/userBooking'>
             <UserBooking></UserBooking>

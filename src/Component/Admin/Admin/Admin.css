@@ -1,0 +1,23 @@
+.side-bar{
+    background: #263a41;
+    height: 92vh;
+    position: sticky;
+
+}
+.admin-service{
+    text-align: center;
+    padding-top: 20%;
+    
+}
+.admin-service p{
+    padding: 2%;
+    margin: 0;
+    /* background: white; */
+}
+.admin-service p{
+    font-size: 18px;
+    text-decoration: none;
+}
+.admin-service p Link:hover{
+    text-decoration: none;
+}

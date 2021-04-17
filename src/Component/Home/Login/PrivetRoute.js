@@ -9,7 +9,7 @@ const PrivetRoute = ({ children, ...rest }) => {
       <Route
         {...rest}
         render={({ location }) =>
-          loggedInUser.name || loggedInUser.email || sessionStorage.getItem('token') ? (
+          loggedInUser.name || loggedInUser.email || sessionStorage.getItem('email') ? (
             children
           ) : (
             <Redirect

@@ -11,7 +11,10 @@ import { UserContext } from '../../../App';
 const stripePromise = loadStripe('pk_test_51IeO3RETJzLGeV9qQr5oCAop0kcjFm5Kek2Pti8GxU3pmTeOMlDoipFSSkarVuILFNEhyghB54J9VBJ4Zp1pJWw800VOZEiPca');
 
 const UserBooking = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const loggedUserEmail = sessionStorage.getItem('email')
+    const loggedUserName = sessionStorage.getItem('name')
+
     const [info, setInfo] = useState({})
     console.log(info);
     const handleBlur = e => {
@@ -31,11 +34,11 @@ const UserBooking = () => {
 
                     <div class="form-group">
 
-                        <input type="text" class="form-control" value={loggedInUser.name}  />
+                        <input type="text" class="form-control" value={loggedUserName}  />
                     </div>
                     <div class="form-group">
 
-                        <input class="form-control" value={loggedInUser.email}  />
+                        <input class="form-control" value={loggedUserEmail}  />
                     </div>
                     <select onBlur={handleBlur} class="form-select" name='service' >
                         <option selected>Select Service</option>

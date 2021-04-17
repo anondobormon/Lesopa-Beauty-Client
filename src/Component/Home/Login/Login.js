@@ -29,13 +29,13 @@ const Login = () => {
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } }
 
-    const setUserToken = () => {
-        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
-            sessionStorage.setItem('token', idToken);
-          }).catch(function(error) {
-            // Handle error
-          });
-    }
+    // const setUserToken = () => {
+    //     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+    //         sessionStorage.setItem('token', idToken);
+    //       }).catch(function(error) {
+    //         // Handle error
+    //       });
+    // }
 
 
     const handleSignIn = () => {
@@ -48,7 +48,9 @@ const Login = () => {
                     email: email,
                     isSignIn: true
                 };
-                setUserToken();
+                // setUserToken();
+                sessionStorage.setItem('email', signedInUser.email);
+                sessionStorage.setItem('name', signedInUser.name);
                 console.log(result);
                 setNewUser(signedInUser);
                 setLoggedInUser(signedInUser);

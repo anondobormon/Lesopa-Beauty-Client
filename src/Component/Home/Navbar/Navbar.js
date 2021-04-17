@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
 const Navbar = () => {
+    const loggedUserEmail = sessionStorage.getItem('email')
+    const [isAdmin, setIsAdmin] = useState()
+
+    useEffect(()=> {
+        fetch('http://localhost:5000/isAdmin', {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify({email: loggedUserEmail})
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setIsAdmin(data)
+        })
+    }, [loggedUserEmail])
     return (
+    
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -21,9 +38,12 @@ const Navbar = () => {
                             <li class="nav-item">
                                 <Link class="nav-link active" aria-current="page" href="#">Service</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link to='/admin/makeAdmin' class="nav-link active" aria-current="page" href="#">Admin</Link>
-                            </li>
+                             {
+                                 isAdmin && <li class="nav-item">
+                                 <Link to='/admin/makeAdmin' class="nav-link active" aria-current="page" href="#">Admin</Link>
+                             </li>
+                             }
+                            
                             <li class="nav-item">
                                 <Link class="nav-link active" aria-current="page" href="#">About Us</Link>
                             </li>
