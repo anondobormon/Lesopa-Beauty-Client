@@ -15,7 +15,7 @@ const BookingList = () => {
         fetch('http://localhost:5000/allOrders')
             .then(res => res.json())
             .then(data => {
-                const userData = data.filter(pd => pd.loggedInUser.email === loggedUser)
+                const userData = data.filter(pd => pd.loggedInUser?.email === loggedUser)
                 setOrder(userData)
             })
     },[])
@@ -48,7 +48,7 @@ const BookingList = () => {
                         </tbody>
                         )
                     }
-
+{/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, repellendus. Libero animi cupiditate placeat fuga cum id hic omnis vitae. */}
                 </table>
             </div>
         </div>
