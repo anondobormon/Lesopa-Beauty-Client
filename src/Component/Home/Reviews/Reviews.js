@@ -27,14 +27,14 @@ const Reviews = () => {
                 <h2>Customer Review</h2>
                 <p><small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid iusto nam harum qui veniam error perferendis magnam autem illo placeat.</small></p>
             </div>
-            <div className="row m-5 p-5">
+            <div className="row">
                 {
                     reviewsData.map(review =>
-                        <div className="col-md-6">
+                        <div className="col-md-4 review-card">
                             <div class="card mb-3 card-details">
                                 <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img style={{width: '100%'}} src={review.img} alt="..." />
+                                    <div class="col-md-4 review-img">
+                                        <img  src={review.img} alt="..." />
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">

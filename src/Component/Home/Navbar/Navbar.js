@@ -4,6 +4,7 @@ import { UserContext } from '../../../App';
 
 const Navbar = () => {
     const loggedUserEmail = sessionStorage.getItem('email')
+    const loggedUserName = sessionStorage.getItem('name')
     const [isAdmin, setIsAdmin] = useState()
 
     useEffect(()=> {
@@ -48,7 +49,14 @@ const Navbar = () => {
                                 <Link class="nav-link active" aria-current="page" href="#">About Us</Link>
                             </li>
                             <li class="nav-item">
+                                {!loggedUserEmail ? 
                                 <Link to='/login' class="nav-link active" aria-current="page" href="#">Login</Link>
+                                 : 
+                                 <Link to='/login'
+                                 class="nav-link active" 
+                                 style={{color:'tomato', fontWeight:'700'}}
+                                 >{loggedUserName}</Link>
+                                 }
                             </li>
                         </ul>
                     </div>

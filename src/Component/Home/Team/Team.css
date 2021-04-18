@@ -4,17 +4,25 @@
     margin: auto;
     position: relative;
     height: 30%;
-    /* border: 1px solid black; */
     margin-top: -15%;
-    /* margin-bottom: 5%; */
     border-radius: 5px;
     box-shadow: 2px 2px 15px rgb(245, 244, 244);
+    transition: 0.5s ease-in-out;
 
 }
 
 .team-member{
     height: 800px;
     /* border: 1px solid black; */
+}
+.team-member img{
+    border-radius: 10px;
+}
+.member ul li{
+    transition: 0.5s ease-in-out;
+}
+.member ul{
+    transition: 0.7s ease;
 }
 .member:hover ul{
     display: block;

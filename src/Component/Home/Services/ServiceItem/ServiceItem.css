@@ -6,6 +6,7 @@
     position: relative;
     text-align: center;
     padding-top: 50px;
+    
 }
 .text-brand{
     font-size: 50px;
@@ -13,7 +14,24 @@
     font-weight: bold;
 }
 .service-card{
-    box-shadow: 5px 5px 5px lightgray;
+    box-shadow: 5px 5px 5px lightgray;  
+    margin-bottom: 4%; 
+}
+
+.service-card img{
+    transition: 0.5s all ease-in-out;
+}
+.card-img{
+    overflow: hidden;
+}
+.service-card:hover img{
+    transform: scale(1.2)
+}
+.card-body{
+    transition: ease-in 0.5s;
+}
+.service-card:hover .card-body{
+    background: rgba(213, 213, 214, 0.705);
 }
 .btn-appointment{
     background: #f5615e;

@@ -4,6 +4,7 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../../../App';
 import { useHistory, useLocation } from 'react-router';
+import './Login.css'
 
 
 if (!firebase.apps.length) {
@@ -27,15 +28,8 @@ const Login = () => {
 
     const history = useHistory();
     const location = useLocation();
+    
     let { from } = location.state || { from: { pathname: "/" } }
-
-    // const setUserToken = () => {
-    //     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
-    //         sessionStorage.setItem('token', idToken);
-    //       }).catch(function(error) {
-    //         // Handle error
-    //       });
-    // }
 
 
     const handleSignIn = () => {
@@ -48,7 +42,7 @@ const Login = () => {
                     email: email,
                     isSignIn: true
                 };
-                // setUserToken();
+
                 sessionStorage.setItem('email', signedInUser.email);
                 sessionStorage.setItem('name', signedInUser.name);
                 console.log(result);
@@ -62,8 +56,15 @@ const Login = () => {
             });
     }
     return (
-        <div className='m-5 p-5'>
-            <button className='btn btn-danger' onClick={handleSignIn}>Google sing in</button>
+        <div className='login'>
+            <div className="col-md-3 login-section">
+                <p>Enter Your Name</p>
+                <input type="text" name="" id="" value='Anondo Bormon' /><br/>
+                <p>Enter Password</p>
+                <input type="password" name="" value='123456789' id=""/><br/>
+                <button className='btn btn-danger' onClick={handleSignIn}>Google sing in</button>
+            </div>
+            
         </div>
     );
 };
