@@ -1,14 +1,16 @@
 import React from 'react';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import logo from '../../../Image/LEOSPA PNG3.png'
 
 const Footer = () => {
     return (
         <section className='footerArea'>
             <div className="footer col-md-6">
                 <div>
-                    <h3 className='text-color pt-5 pb-3'>Leospa</h3>
+                    <img style={{ width: '150px' }} src={logo} alt="" />
+                    <h3 style={{margin: '0', padding:'0'}} className='text-color pt-5 pb-3'>LEOSPA BEAUTY</h3>
                 </div>
                 <div className="footer-detail">
                     <ul>

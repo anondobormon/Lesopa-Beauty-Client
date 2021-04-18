@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../../Image/LEOSPA PNG3.png'
 
 
 const Navbar = () => {
@@ -24,7 +25,7 @@ const Navbar = () => {
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Leospa</a>
+                    <a class="navbar-brand" href="#"><img style={{width:'50px'}} src={logo} alt=""/> LEOSPA BEAUTY</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
