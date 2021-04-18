@@ -11,7 +11,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
-    const reviewsData = reviews.slice(0, 4);
+    const reviewsData = reviews.slice(0, 6);
     console.log(reviews);
 
     useEffect(() => {
@@ -19,6 +19,7 @@ const Reviews = () => {
         .then(res => res.json())
         .then(data => setReviews(data))
     }, [])
+
 
 
     return (
