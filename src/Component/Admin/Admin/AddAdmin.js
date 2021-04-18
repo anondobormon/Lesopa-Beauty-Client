@@ -1,11 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useForm } from "react-hook-form";
+
 
 const AddAdmin = () => {
     const [imageURL, setImageURL] = useState({})
     const [info, setInfo] = useState({})
-
 
     const handleSubmit = () => {
         const eventData = {
@@ -24,7 +23,6 @@ const AddAdmin = () => {
                 alert('Admin Added Successfully')
                 window.location.reload()
             })
-
     }
 
     const handleBlur = event => {
@@ -32,7 +30,6 @@ const AddAdmin = () => {
         newInfo[event.target.name] = event.target.value;
         setInfo(newInfo)
         console.log(newInfo);
-
     }
 
 

@@ -23,7 +23,6 @@ const Review = () => {
                 alert('Admin Added Successfully')
                 window.location.reload()
             })
-        
     }
 
 
@@ -53,9 +52,6 @@ const Review = () => {
     return (
         <div className="row">
             <UserSidebar></UserSidebar>
-
-
-
             <div className="col-md-10">
                 <div className="order">
                     <div className="booking-area p-5">
@@ -75,7 +71,6 @@ const Review = () => {
                             </div>
                             <button onClick={handleSubmit} class="btn btn-danger">Submit</button>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from './Sidebar';
 
 const ManageOrder = () => {
-
     const [order, setOrder] = useState([])
-
 
     useEffect(() => {
         fetch('https://lit-ravine-67138.herokuapp.com/allOrders')
@@ -15,7 +13,6 @@ const ManageOrder = () => {
             })
     }, [])
 
-
     const handleDelete = (id) => {
         fetch(`https://lit-ravine-67138.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
@@ -24,9 +21,9 @@ const ManageOrder = () => {
             .then(result => {
                 console.log('Deleted successfully');
                 alert('Order Deleted Successfully')
+                window.location.reload()
             })
         console.log(id);
-
     }
 
 

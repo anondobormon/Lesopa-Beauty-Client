@@ -1,13 +1,10 @@
 import React from 'react';
-import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { UserContext } from '../../../App';
 import UserSidebar from '../UserSidbar/UserSidebar';
 import './UserDashboard.css'
 
 const BookingList = () => {
-    // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const loggedUser = sessionStorage.getItem('email')
     console.log(loggedUser);
     // const {email} = loggedInUser;
@@ -37,7 +34,6 @@ const BookingList = () => {
                                     <th scope="col">Service</th>
                                     <th scope="col">PayWith</th>
                                     <th scope="col">Status</th>
-
                                 </tr>
                             </thead>
                             {
@@ -57,7 +53,6 @@ const BookingList = () => {
                     </div>
                 </div>
             </div>
-            
         </div>
     );
 };

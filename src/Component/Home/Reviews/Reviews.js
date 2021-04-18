@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './Reviews.css'
-import img1 from '../../../Image/review.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Reviews.css';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-
-
-
-
-
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -19,8 +13,6 @@ const Reviews = () => {
         .then(res => res.json())
         .then(data => setReviews(data))
     }, [])
-
-
 
     return (
         <section>

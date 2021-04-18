@@ -9,7 +9,6 @@ import PayCard from './PayCard';
 const stripePromise = loadStripe('pk_test_51IeO3RETJzLGeV9qQr5oCAop0kcjFm5Kek2Pti8GxU3pmTeOMlDoipFSSkarVuILFNEhyghB54J9VBJ4Zp1pJWw800VOZEiPca');
 
 const UserBooking = () => {
-
     const loggedUserEmail = sessionStorage.getItem('email')
     const loggedUserName = sessionStorage.getItem('name')
     const [info, setInfo] = useState({})
@@ -26,16 +25,12 @@ const UserBooking = () => {
     }
 
     return (
-
-
         <section className='row'>
             <UserSidebar></UserSidebar>
-
             <div className="col-md-10">
                 <div className="order">
                     <div className="booking-area p-5">
                         <h1 className="text-order">Booking Appointment</h1>
-
                         <div className='col-4' >
                             <div class="form-group">
                                 <input type="text" class="form-control" value={loggedUserName} />
@@ -54,7 +49,6 @@ const UserBooking = () => {
                                     <PayCard info={info}></PayCard>
                                 </Elements>
                             </div>
-
                         </div>
                     </div>
                 </div>

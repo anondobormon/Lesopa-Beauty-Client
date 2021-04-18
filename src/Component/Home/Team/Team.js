@@ -1,7 +1,7 @@
 import React from 'react';
 import './Team.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faFacebookF, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import img1 from '../../../Image/joseph.jpg';
 import img2 from '../../../Image/chery.jpg';
 import img3 from '../../../Image/david.jpg';
@@ -43,8 +43,7 @@ const Team = () => {
                                 <p  className='text-center'><small>{mem.designation}</small></p>
                                 <ul>
                                     <li className='team-icon'><FontAwesomeIcon icon={faFacebookF} /></li>
-                                    <li className='team-icon'><FontAwesomeIcon icon={faTwitter} /></li>
-                                    
+                                    <li className='team-icon'><FontAwesomeIcon icon={faTwitter} /></li>                                   
                                     <li className='team-icon'><FontAwesomeIcon icon={faMapMarkerAlt} /></li>
                                 </ul>
                             </div>

@@ -1,11 +1,8 @@
 import React from 'react';
 import img1 from '../../../Image/joseph.jpg';
-import img2 from '../../../Image/qutaion.png'
 import './WeAre.css'
 
 const WeAre = () => {
-
-
     return (
         <div>
             <div id="carouselExampleIndicators" class="carousel slide pt-5 bg-classic" data-bs-ride="carousel">

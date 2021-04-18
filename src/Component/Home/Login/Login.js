@@ -14,7 +14,6 @@ if (!firebase.apps.length) {
 }
 
 const Login = () => {
-
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [newUser, setNewUser] = useState({
         isSignIn: false,
@@ -22,15 +21,10 @@ const Login = () => {
         email: ''
     })
     console.log(loggedInUser);
-
-
     var provider = new firebase.auth.GoogleAuthProvider();
-
     const history = useHistory();
     const location = useLocation();
-    
     let { from } = location.state || { from: { pathname: "/" } }
-
 
     const handleSignIn = () => {
         firebase.auth()
@@ -64,7 +58,6 @@ const Login = () => {
                 <input type="password" name="" value='123456789' id=""/><br/>
                 <button className='btn btn-danger' onClick={handleSignIn}>Google sing in</button>
             </div>
-            
         </div>
     );
 };

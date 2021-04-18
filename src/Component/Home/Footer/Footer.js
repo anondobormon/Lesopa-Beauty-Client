@@ -26,7 +26,6 @@ const Footer = () => {
                             <li className='icon-style' style={{ color: 'black' }}><FontAwesomeIcon icon={faTwitter} /></li>
                             <li className='icon-style' style={{ color: 'gray' }}><FontAwesomeIcon icon={faYoutube} /></li>
                             <li style={{ color: 'tomato', fontSize: '20px' }}><FontAwesomeIcon icon={faTwitter} /></li>
-
                         </ul>
                     </div>
                 </div>

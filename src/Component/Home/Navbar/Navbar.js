@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../../App';
+
 
 const Navbar = () => {
     const loggedUserEmail = sessionStorage.getItem('email')

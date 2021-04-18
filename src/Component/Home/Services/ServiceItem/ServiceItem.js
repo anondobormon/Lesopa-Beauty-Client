@@ -17,7 +17,6 @@ const ServiceItem = () => {
             })
     }, [])
 
-
     return (
         <section className='row services'>
             {
