@@ -28,7 +28,7 @@ const PayCard = ({ info }) => {
 
       const orderService = { paymentMethod, info }
       console.log(orderService);
-      fetch('http://localhost:5000/bookService', {
+      fetch('https://lit-ravine-67138.herokuapp.com/bookService', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(orderService)

@@ -14,7 +14,7 @@ const AddService = () => {
             img: imageURL
         }
         console.log(eventData);
-        fetch('http://localhost:5000/addService', {
+        fetch('https://lit-ravine-67138.herokuapp.com/addService', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(eventData)

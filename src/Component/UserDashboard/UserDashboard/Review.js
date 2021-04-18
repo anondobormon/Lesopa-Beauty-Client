@@ -14,7 +14,7 @@ const Review = () => {
             img: imageURL
         }
         console.log(eventData);
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://lit-ravine-67138.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(eventData)

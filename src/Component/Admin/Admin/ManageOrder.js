@@ -7,7 +7,7 @@ const ManageOrder = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://lit-ravine-67138.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => {
                 setOrder(data)
@@ -17,7 +17,7 @@ const ManageOrder = () => {
 
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://lit-ravine-67138.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -29,22 +29,7 @@ const ManageOrder = () => {
 
     }
 
-    const [changStatus, setChangeStatus] = useState()
 
-    const handleChangeStatus = (id) => {
-        console.log(id);
-        fetch(`http://localhost:5000/allOrder/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setChangeStatus(data)
-            })
-    }
-    const handleClickStatus = (id) => {
-        // const statusValue = document.getElementById('status').value
-        // console.log(statusValue);
-
-    }
 
 
     return (
@@ -78,7 +63,7 @@ const ManageOrder = () => {
                                             <td>Visa</td>
                                             <td>
 
-                                                <select onChange={() => handleChangeStatus(od._id)} onClick={handleClickStatus(od._id)} id='status' class="form-select " id='status' style={{ width: '80%', display: 'inline' }}>
+                                                <select id='status' class="form-select " id='status' style={{ width: '80%', display: 'inline' }}>
                                                     <option defaultValue="Pending">Pending</option>
                                                     <option value="Ongoing">Ongoing</option>
                                                     <option value="Done">Done</option>
