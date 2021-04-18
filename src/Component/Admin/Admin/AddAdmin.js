@@ -17,13 +17,13 @@ const AddAdmin = () => {
         console.log(eventData);
         fetch('http://localhost:5000/addAdmin', {
             method: 'POST',
-            headers: {'Content-Type' : 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(eventData)
         })
-        .then(res => {
-            alert('Admin Added Successfully')
-        })
-        
+            .then(res => {
+                alert('Admin Added Successfully')
+            })
+
     }
 
     const handleBlur = event => {
@@ -31,7 +31,7 @@ const AddAdmin = () => {
         newInfo[event.target.name] = event.target.value;
         setInfo(newInfo)
         console.log(newInfo);
-        
+
     }
 
 
@@ -54,21 +54,30 @@ const AddAdmin = () => {
 
     return (
         <div>
-            <div className="col-md-6">
-                <div class="form-group">
-                    <h4>User Name</h4>
-                    <input onBlur={handleBlur} type="text" class="form-control" name='name' placeholder="Enter Name" />
+            <div className="col-md-12">
+                <div className="order">
+                    <div className="table">
+                        
+                        <div className="col-md-6">
+                            <div class="form-group">
+                            <h1 className="text-order">Add Admin</h1>
+                                <h4>User Name</h4>
+                                <input onBlur={handleBlur} type="text" class="form-control" name='name' placeholder="Enter Name" />
+                            </div>
+                            <div class="form-group">
+                                <h4>User Email</h4>
+                                <input onBlur={handleBlur} type="email" class="form-control" name='email' placeholder="Email" />
+                            </div>
+                            <div class="form-group">
+                                <h4>Upload Image</h4>
+                                <input type="file" class="form-control" onChange={handleUploadImage} />
+                            </div>
+                            <button onClick={handleSubmit} class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <h4>User Email</h4>
-                    <input onBlur={handleBlur} type="email" class="form-control" name='email' placeholder="Email" />
-                </div>
-                <div class="form-group">
-                    <h4>Upload Image</h4>
-                    <input type="file" class="form-control" onChange={handleUploadImage} />
-                </div>
-                <button onClick={handleSubmit} class="btn btn-primary">Submit</button>
             </div>
+
         </div>
     );
 };

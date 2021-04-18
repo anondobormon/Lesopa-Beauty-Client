@@ -3,14 +3,25 @@
     background: white;
     margin: auto;
     position: relative;
-    height: 20%;
+    height: 30%;
+    /* border: 1px solid black; */
     margin-top: -15%;
+    /* margin-bottom: 5%; */
     border-radius: 5px;
     box-shadow: 2px 2px 15px rgb(245, 244, 244);
 
 }
+
+.team-member{
+    height: 800px;
+    /* border: 1px solid black; */
+}
+.member:hover ul{
+    display: block;
+}
 .member h4{
     padding-top: 4%;
+    
 }
 .member:hover{
     margin-top: -25%;
@@ -20,4 +31,31 @@
     position: relative;
     text-align: center;
     margin-top: 50px;
+}
+.member ul{
+    display: none;
+}
+
+.member ul{
+    
+    list-style: none;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    /* border: 1px solid black; */
+    
+}
+.team-icon{
+    
+    margin: 0 4px;
+    display: inline;
+    padding:5px 10px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.team-icon:hover{
+    
+    background: #ff817e;
+    border: 2px solid #ff817e;
+    color: white;
 }

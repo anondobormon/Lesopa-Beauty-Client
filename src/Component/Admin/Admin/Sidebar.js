@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Admin.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faShoppingCart, faThLarge, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+
 
 const Sidebar = () => {
     return (
 
-        <div className="col-md-2 side-bar">
-            <div className="admin-service">
-                <p><Link to='/admin/orderList' style={{color: '#ff817e'}}>Order List</Link></p>
-                <p><Link to='/admin/addService'>Add Service</Link></p>
-                <p><Link to='/admin/makeAdmin'>Make Admin</Link></p>
-                <p><Link to='/admin/manage'>Manage Service</Link></p>
+        <div className="col-md-2 ">
+            <div className="option">
+               <Link to='/admin/orderList' > <p><FontAwesomeIcon icon={faShoppingCart} /><span> Order List</span></p></Link>
+               <Link to='/admin/addService' > <p><FontAwesomeIcon icon={faPlus} /> <span>Add Service</span></p></Link>
+               <Link to='/admin/makeAdmin' > <p><FontAwesomeIcon icon={faUserPlus} /><span> Make Admin</span></p></Link>
+               <Link to='/admin/manage' > <p><FontAwesomeIcon icon={faThLarge} /><span> Manage Order</span></p></Link>
+                
             </div>
         </div>
 

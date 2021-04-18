@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { UserContext } from '../../../App';
 import UserSidebar from '../UserSidbar/UserSidebar';
+import './UserDashboard.css'
 
 const BookingList = () => {
     // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -11,46 +12,52 @@ const BookingList = () => {
     console.log(loggedUser);
     // const {email} = loggedInUser;
     const [order, setOrder] = useState([])
-    useEffect(()=>{
+    useEffect(() => {
         fetch('http://localhost:5000/allOrders')
             .then(res => res.json())
             .then(data => {
-                const userData = data.filter(pd => pd.loggedInUser?.email === loggedUser)
+                const userData = data.filter(pd => pd.info?.email === loggedUser)
                 setOrder(userData)
             })
-    },[])
+    }, [])
     return (
         <div className="row">
             <UserSidebar></UserSidebar>
-            <div className="col-md-8">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">SL No</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email ID</th>
-                            <th scope="col">Service</th>
-                            <th scope="col">PayWith</th>
-                            <th scope="col">Status</th>
-                            
-                        </tr>
-                    </thead>
-                    {
-                        order.map((od, index) => <tbody>
-                            <tr>
-                                <th scope="row">{index + 1}</th>
-                                <td>{od.loggedInUser?.name}</td>
-                                <td>{od.loggedInUser?.email}</td>
-                                <td>{od.info?.service}</td>
-                                <td>Visa</td>
-                                <td>Done</td>
-                            </tr>
-                        </tbody>
-                        )
-                    }
-{/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, repellendus. Libero animi cupiditate placeat fuga cum id hic omnis vitae. */}
-                </table>
+
+            <div className="col-md-10">
+                <div className="order">
+                    <div className="table">
+                        <h1 className="text-order">Booking List</h1>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">SL No</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email ID</th>
+                                    <th scope="col">Service</th>
+                                    <th scope="col">PayWith</th>
+                                    <th scope="col">Status</th>
+
+                                </tr>
+                            </thead>
+                            {
+                                order.map((od, index) => <tbody>
+                                    <tr>
+                                        <th scope="row">{index + 1}</th>
+                                        <td>{od.info?.name}</td>
+                                        <td>{od.info?.email}</td>
+                                        <td>{od.info?.service}</td>
+                                        <td>Visa</td>
+                                        <td>Done</td>
+                                    </tr>
+                                </tbody>
+                                )
+                            }
+                        </table>
+                    </div>
+                </div>
             </div>
+            
         </div>
     );
 };

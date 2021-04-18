@@ -4,19 +4,17 @@ import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Component/Home/Home';
 import Notfound from './Component/Notfound/Notfound';
-
-import Team from './Component/Home/Team/Team';
 import Admin from './Component/Admin/Admin/Admin';
 import AddService from './Component/Admin/Admin/AddService';
 import UserDashboard from './Component/UserDashboard/UserDashboard/UserDashboard';
 import UserBooking from './Component/UserDashboard/UserDashboard/UserBooking';
 import BookingList from './Component/UserDashboard/UserDashboard/BookingList';
-import Reviews from './Component/Home/Reviews/Reviews';
 import Review from './Component/UserDashboard/UserDashboard/Review';
 import Login from './Component/Home/Login/Login';
 import PrivetRoute from './Component/Home/Login/PrivetRoute';
 import OrderList from './Component/Admin/Admin/OrderList';
 import Navbar from './Component/Home/Navbar/Navbar'
+import ManageOrder from './Component/Admin/Admin/ManageOrder';
 
 
 export const UserContext = createContext({})
@@ -51,6 +49,10 @@ function App() {
 
           <Route path='/admin/orderList'>
             <OrderList></OrderList>
+          </Route>
+
+          <Route path='/admin/manage'>
+            <ManageOrder></ManageOrder>
           </Route>
 
 

@@ -7,8 +7,8 @@ const Admin = () => {
         <section>
             <div className="row">
                 <Sidebar></Sidebar>
-                <div className="col-md-8">
-                    <h1>Add Admin</h1>
+                <div className="col-md-10">
+                    
                     <AddAdmin></AddAdmin>
                 </div>
             </div>

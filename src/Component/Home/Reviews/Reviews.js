@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Review.css'
 import img1 from '../../../Image/review.jpg';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -29,18 +31,25 @@ const Reviews = () => {
                 {
                     reviewsData.map(review =>
                         <div className="col-md-6">
-                            <div class="card mb-3">
+                            <div class="card mb-3 card-details">
                                 <div class="row g-0">
                                     <div class="col-md-4">
-                                        <img style={{width: '110%'}} src={review.img} alt="..." />
+                                        <img style={{width: '100%'}} src={review.img} alt="..." />
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
                                             <h4 class="card-title">{review.name}</h4>
                                             <h5 class="card-title">{review.date}</h5>
                                             <p class="card-text">{review.description}</p>
-                                            <p class="card-text"><small class="text-muted">Start 5</small></p>
+                                            <p  class="card-text"><small  class="text-muted">
+                                                <FontAwesomeIcon style={{color:'#ff817e'}} icon={faStar} />
+                                                <FontAwesomeIcon style={{color:'#ff817e'}} icon={faStar} />
+                                                <FontAwesomeIcon style={{color:'#ff817e'}} icon={faStar} />
+                                                <FontAwesomeIcon style={{color:'#ff817e'}} icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                </small></p>
                                         </div>
+                                        <button className="btn btn-brand">Read More</button>
                                     </div>
                                 </div>
                             </div>

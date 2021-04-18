@@ -4,20 +4,48 @@
     position: sticky;
 
 }
-.admin-service{
-    text-align: center;
-    padding-top: 20%;
+
+
+
+
+
+
+
+
+.option{
+    padding-left: 10%;
+    padding-top: 12%;
     
 }
-.admin-service p{
+.option p{
+    font-weight: bold;
+    font-size: 20px;
+    color: gray;
     padding: 2%;
     margin: 0;
-    /* background: white; */
+    /* background: gray; */
 }
-.admin-service p{
-    font-size: 18px;
-    text-decoration: none;
+
+.option p span{
+    padding-left: 10px;
 }
-.admin-service p Link:hover{
-    text-decoration: none;
+.option p:hover{
+    background: lightgray;
+}
+
+
+.order{
+    background: lightgray;
+    padding: 20px;
+}
+.table{
+    padding: 40px;
+    border-radius: 10px;
+    background: white;
+}
+
+.text-order{
+    font-size: 40px;
+    color: gray;
+    font-weight: 700;
 }

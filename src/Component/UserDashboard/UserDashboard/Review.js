@@ -52,21 +52,33 @@ const Review = () => {
     return (
         <div className="row">
             <UserSidebar></UserSidebar>
-            <div className="col-md-6">
-                <div class="form-group">
-                    <h4>Enter Your Name</h4>
-                    <input onBlur={handleBlur} type="text" class="form-control" name='name' placeholder="Enter Your Name" />
+
+
+
+            <div className="col-md-10">
+                <div className="order">
+                    <div className="booking-area p-5">
+                        <h1 className="text-order">Review</h1>
+                        <div className="col-md-6">
+                            <div class="form-group">
+                                <h4>Enter Your Name</h4>
+                                <input onBlur={handleBlur} type="text" class="form-control" name='name' placeholder="Enter Your Name" />
+                            </div>
+                            <div class="form-group">
+                                <h4>Description</h4>
+                                <textarea onBlur={handleBlur} class="form-control" name='description' placeholder="Description" />
+                            </div>
+                            <div class="form-group">
+                                <h4>Upload Your Image</h4>
+                                <input type="file" class="form-control" onChange={handleUploadImage} />
+                            </div>
+                            <button onClick={handleSubmit} class="btn btn-danger">Submit</button>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="form-group">
-                    <h4>Description</h4>
-                    <textarea onBlur={handleBlur} class="form-control" name='description' placeholder="Description" />
-                </div>
-                <div class="form-group">
-                    <h4>Upload Image</h4>
-                    <input type="file" class="form-control" onChange={handleUploadImage} />
-                </div>
-                <button onClick={handleSubmit} class="btn btn-primary">Submit</button>
             </div>
+
         </div>
     );
 };

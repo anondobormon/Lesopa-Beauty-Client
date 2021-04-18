@@ -13,6 +13,9 @@
 .success{
     padding: 7%;
 }
+.success h4{
+    font-size: 50px;
+}
 .btn{
     margin-right: 30px;
 }
@@ -20,4 +23,13 @@
     .carousel-item .image{
         display: none;
     }
+  }
+  .btn-brand{
+      background: transparent;
+      border: 2px solid #263a41;
+      color: black;
+  }
+  .btn-brand:hover{
+      background: #263a41;
+      color: white;
   }

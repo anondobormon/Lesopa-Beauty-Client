@@ -7,3 +7,17 @@
     text-align: center;
     padding-top: 50px;
 }
+.text-brand{
+    font-size: 50px;
+    color: #ff817e;
+    font-weight: bold;
+}
+.service-card{
+    box-shadow: 5px 5px 5px lightgray;
+}
+.btn-appointment{
+    background: #f5615e;
+}
+.btn-appointment:hover{
+    color: white;
+}

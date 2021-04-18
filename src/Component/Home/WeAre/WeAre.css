@@ -1,0 +1,16 @@
+.details-client img{
+    width: 100%;
+    /* border-radius: 0%; */
+}
+.col-8{
+    margin: auto;
+    position: relative;
+}
+.img{
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
