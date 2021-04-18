@@ -5,11 +5,14 @@
     text-align: center;
 }
 .card-details{
-    height: 280px;
+    height: 100%;
     overflow: hidden;
 }
 @media (max-width: 700px) {
     .card-details img{
         display: none;
     }
+  }
+  .col-md-6{
+      margin-bottom: 20px;
   }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './Review.css'
+import './Reviews.css'
 import img1 from '../../../Image/review.jpg';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -48,8 +48,9 @@ const Reviews = () => {
                                                 <FontAwesomeIcon style={{color:'#ff817e'}} icon={faStar} />
                                                 <FontAwesomeIcon icon={faStar} />
                                                 </small></p>
+                                                <button className="btn btn-brand">Read More</button>
                                         </div>
-                                        <button className="btn btn-brand">Read More</button>
+                                        
                                     </div>
                                 </div>
                             </div>
