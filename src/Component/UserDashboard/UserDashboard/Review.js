@@ -21,8 +21,9 @@ const Review = () => {
         })
             .then(res => {
                 alert('Admin Added Successfully')
+                window.location.reload()
             })
-
+        
     }
 
 

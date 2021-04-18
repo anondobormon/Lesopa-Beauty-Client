@@ -35,6 +35,7 @@ const PayCard = ({ info }) => {
       })
         .then(result => {
           alert('Added Successfully')
+          window.location.reload()
           console.log(orderService);
         })
     }
