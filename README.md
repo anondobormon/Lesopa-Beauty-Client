@@ -1,10 +1,11 @@
 
 
-## LEOSPA BUEAUTY
+Project name: LEOSPA BUEAUTY
+Project Cetagorie: Service related
 
-## live link : https://leospa-beauty.web.app
+live link : https://leospa-beauty.web.app
 
-## Project Introduction:
+** Project Introduction:**
 
 1. Have an home page
 2. Use react router
